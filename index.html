@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nico Winter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--Navigations Drop-List?-->
+<header>
+  <nav class="navigation">
+    <div class="left">
+      <button class="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="logo">Mein Portfolio</div>
+    </div>
+
+    <ul id="nav-links" class="navigation-links">
+      <li><a href="#welcome">Willkommen</a></li>
+      <li><a href="#about">Über mich</a></li>
+      <li><a href="#skills">Fähigkeiten</a></li>
+      <li><a href="#projects">Projekte</a></li>
+      <li><a href="#plans">Pläne</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+    </ul>
+
+    <button id="theme-toggle" class="theme-toggle" aria-label="Darstellung umschalten">🌓</button>
+  </nav>
+</header>
+
+  <!--Willkommenspart-->
+  <section id="welcome" class="welcome reveal">
+    <h1>Willkommen!</h1>
+    <p>🚀Diese Website hier wird meine erste Portfolio-Seite mit CSS 🚀</p>
+    <a href="#projects" class="btn-primary">Zu meinen Projekten</a>
+  </section>
+
+  <section id="about" class="about">
+    <h2>Über mich</h2>
+    <p>Hi! Ich bin Nico, 21 Jahre alt und komme aus Ulm. 
+      Ich habe am 01.09.25 meine Ausbildung zum Fachinformatiker für Anwendungsentwicklungen 
+      bei <b>Camdere Consulting</b> angefangen und lerne jetzt HTML und CSS für meine Zukunft.</p>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>Meine Fähigkeiten</h2>
+      <div class="skill-set">
+        <div class="skill">Teamfähigkeit🫂</div>
+        <div class="skill">Kommunikativ🗣️</div>
+        <div class="skill">Ergeizig🏆</div>
+        <div class="skill">Fließend Deutsch & Englisch</div>
+        <div class="skill">Anfängerstufe HTML + CSS💻</div>
+      </div>
+  </section>
+
+<section id="projects" class="projects reveal">
+  <h2>Meine bisherigen Projekte</h2>
+  <div class="project-grid">
+    <article class="project-card" data-project="landing">
+      <h3>HTML Landing Page</h3>
+      <p>Kleine einseitige Landing Page.</p>
+      <button class="btn-outline open-modal" data-project="landing">Details</button>
+    </article>
+
+    <article class="project-card" data-project="personal">
+      <h3>Personal Page CSS</h3>
+      <p>Statisches Profil mit responsivem Layout.</p>
+      <button class="btn-outline open-modal" data-project="personal">Details</button>
+    </article>
+
+    <article class="project-card" data-project="portfolio">
+      <h3>HTML Portfolio</h3>
+      <p>Diese Seite hier als Basis.</p>
+      <button class="btn-outline open-modal" data-project="portfolio">Details</button>
+    </article>
+  </div>
+</section>
+
+<section id="plans" class="plans reveal">
+  <h2>Pläne</h2>
+  <div class="accordion">
+    <div class="accordion-item">
+      <button class="accordion-header" aria-expanded="false">Kurzfristig (1–3 Monate)</button>
+      <div class="accordion-panel">
+        <ul>
+          <li>HTML/CSS vertiefen (Layouts, Flexbox, Grid)</li>
+          <li>Grundlagen JavaScript (DOM, Events)</li>
+          <li>Kleines Mini-Projekt pro Woche</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header" aria-expanded="false">Mittelfristig (3–6 Monate)</button>
+      <div class="accordion-panel">
+        <ul>
+          <li>Formulare + Validierung</li>
+          <li>Fetch API (Daten laden)</li>
+          <li>Einfaches Backend ausprobieren</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header" aria-expanded="false">Langfristig (6–12 Monate)</button>
+      <div class="accordion-panel">
+        <ul>
+          <li>Ein Framework kennenlernen (React/Vue)</li>
+          <li>Portfolio mit echten Projekten füllen</li>
+          <li>Basics Testing/Accessibility</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal (einmalig ans Ende des Body setzen) -->
+<div id="project-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-dialog" role="document">
+    <button class="modal-close" aria-label="Modal schließen" data-close>✕</button>
+    <div class="modal-content">
+      <img id="modal-image" alt="" />
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+      <a id="modal-link" href="#" target="_blank" rel="noopener">Projekt öffnen</a>
+    </div>
+  </div>
+</div>
+<button id="backToTop" class="back-to-top" aria-label="Nach oben">↑</button>
+<script src="script.js"></script>
+
+</body>
+</html>
